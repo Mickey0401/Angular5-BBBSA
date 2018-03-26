@@ -1,0 +1,40 @@
+<div id="aggregator-exposure">
+	<h1>Aggregator Exposure</h1>
+	<div class="example-container mat-elevation-z8">
+	  <mat-table #table [dataSource]="dataSource">
+
+	    <ng-container matColumnDef="BorrowerName">
+	      <mat-header-cell *matHeaderCellDef>Borrower Name </mat-header-cell>
+	      <mat-cell *matCellDef="let element"> {{element.BorrowerName}} </mat-cell>
+	    </ng-container>
+
+	    <ng-container matColumnDef="AggregatorId">
+	      <mat-header-cell *matHeaderCellDef> Aggregator Id </mat-header-cell>
+	      <mat-cell *matCellDef="let element"> {{element.AggregatorId}} </mat-cell>
+	    </ng-container>
+
+	    <ng-container matColumnDef="AggregatorClientId">
+	      <mat-header-cell *matHeaderCellDef> Aggregator Client Id </mat-header-cell>
+	      <mat-cell *matCellDef="let element"> {{element.AggregatorClientId}} </mat-cell>
+	    </ng-container>
+
+	    <ng-container matColumnDef="ClientId">
+	      <mat-header-cell *matHeaderCellDef> Client Id </mat-header-cell>
+	      <mat-cell *matCellDef="let element"> {{element.ClientId}} </mat-cell>
+	    </ng-container>
+
+	    <ng-container matColumnDef="ConsolWBStartRow">
+	      <mat-header-cell *matHeaderCellDef> Consol WB Start Row </mat-header-cell>
+	      <mat-cell *matCellDef="let element"> {{element.ConsolWBStartRow}} </mat-cell>
+	    </ng-container>
+
+	    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+	    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+	  </mat-table>
+	  <mat-paginator #paginator
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 20]"
+                 [showFirstLastButtons]="true">
+  	</mat-paginator>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "name": "node-api",
+  "main": "server.js",
+  "script": {
+    "start": "nodemon --watch app/ --exec 'node out/server.js'"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "express": "~3.4.4",
+    "express-session": "~1.14.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.13.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  }
+}
